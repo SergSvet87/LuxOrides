@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="html, css, javascript, cars, car, luxury, sport, rent  svitlychnyi, serhii"
+    />
+    <meta
+      name="description"
+      content="Це сайт оренди автомобілів преміум классу, а також гоночного ексклюзиву, що надасть унікальну можливість побувати за кермом справжньої легенди! "
+    />
+    <meta name="author" content="Світличний Сергій" />
+    <title>Аренда премиальных автомобилей</title>
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <script src="js/main-data-luxury.min.js" defer></script>
+    <script src="js/main-data-sport.min.js" defer></script>
+    <script src="js/tabs.min.js" defer></script>
+    <script src="js/mobile-menu.min.js" defer></script>
+    <script src="js/main.min.js" defer></script>
+    <!-- <script src="js/mobile-menu.min.js" defer></script> -->
+  </head>
+  <body>
+    <!-- "image": "https://maserati.scene7.com/is/image/maserati/maserati/international/Models/MY19/Quattroporte-MY19/2560/GTS/Maserati-MY19-Quattroporte-GTS-V8-Studio-183660M.jpg?$1400x2000$&fit=constrain", -->
+
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo" />
+        </div>
+        <!-- /.logo -->
+        <nav class="menu">
+          <ul class="menu-list">
+            <li class="menu-item"><a href="#">Главная</a></li>
+            <!-- /.menu-item -->
+            <li class="menu-item"><a href="#cars">Автомобили</a></li>
+            <!-- /.menu-item -->
+            <li class="menu-item"><a href="#price">Бронирование авто</a></li>
+            <!-- /.menu-item -->
+          </ul>
+          <!-- /.menu-list -->
+        </nav>
+        <!-- /.menu -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- /.header -->
+
+    <!-- Mobile menu -->
+    <header class="header__menu-mobile mobile-menu">
+      <div class="mobile-menu__inner">
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </div>
+        <!-- ./logo -->
+        <a class="mobile-menu__burger"
+          ><span class="mobile-menu__line"></span
+        ></a>
+      </div>
+
+      <nav class="mobile-menu__nav">
+        <!-- List -->
+        <ul class="mobile-menu__list list-mobile">
+          <li class="list-mobile__item">
+            <a class="list-mobile__link" href="index.html"
+              ><i class="material-icons">hail</i>Главная</a
+            >
+          </li>
+          <li class="list-mobile__item">
+            <a class="list-mobile__link" href="#cars"
+              ><i class="material-icons">star_half</i>Автомобили</a
+            >
+          </li>
+          <li class="list-mobile__item">
+            <a class="list-mobile__link" href="#price"
+              ><i class="material-icons">music_note</i>Бронирование авто</a
+            >
+          </li>
+          <li class="list-mobile__item"><div class="divider"></div></li>
+          <li class="list-mobile__item mobile-menu__close">
+            <a class="list-mobile__link" href="#"
+              ><i class="material-icons">cancel</i>Закрыть</a
+            >
+          </li>
+        </ul>
+        <!-- ./mobile-menu__list -->
+      </nav>
+      <!-- /.mobile-menu__nav -->
+
+      <div class="mobile-menu__overlay"></div>
+      <!-- /.mobile-menu__overlay -->
+    </header>
+    <!-- ./mobile-menu -->
+
+    <main class="main">
+      <section class="basic">
+        <div class="container">
+          <div class="basic-info">
+            <h1 class="basic-title">Аренда премиальных автомобилей</h1>
+            <!-- /.basic-title -->
+            <p class="basic-text">
+              В нашем клубе имеется солидная коллекция спортивных автомобилей —
+              от достаточно распространенных серийных машин до настоящего
+              гоночного эксклюзива. Воспользуйтесь уникальной возможностью
+              побывать за рулем настоящей легенды и узнать, на что она способна
+              за пределами гоночной трассы!
+            </p>
+            <!-- /.basic-text -->
+
+            <div id="basic-action" class="basic-action">
+              <button class="basic-btn button">Посмотреть автомобили</button>
+            </div>
+            <!-- /.basic-btn -->
+          </div>
+          <!-- /.basic-info -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.basic -->
+
+      <section id="cars" class="car">
+        <div class="container">
+          <h2 class="sub-title">Наш автопарк</h2>
+          <!-- /.sub-title -->
+
+          <!-- Категории автомоилей -->
+          <div class="car-toggle">
+            <ul class="car-toggle__tabs tabs-category">
+              <li
+                class="tabs-category__item tabs-category__item_active"
+                data-tab="#category-sport"
+              >
+                Sport
+              </li>
+              <!-- /.tabs-category__item -->
+              <li class="tabs-category__item" data-tab="#category-luxury">
+                Luxury
+              </li>
+              <!-- /.tabs-category__item -->
+            </ul>
+            <!-- /.car-toggle__tabs tabs-category -->
+          </div>
+
+          <div id="category-sport" class="car-items category-car_show"></div>
+
+          <div id="category-luxury" class="car-items">
+            <!-- <div class="car-item">
+              <div class="car-item-img">
+                <img src="img/car1.png" width="390" height="250" alt="car 1" />
+              </div>
+              <div class="car-item-title">Lamborghini Huracan Spyder</div>
+              <div class="car-item-info">
+                <div class="car-item-point point">
+                  <img src="img/transmission.png" alt="transmission" />
+                  <p class="point-text"><span>Коробка</span> автомат</p>
+                </div>
+
+                <div class="car-item-point point">
+                  <img src="assets/img/icons/gear.svg" alt="Gear" />
+                  <p class="point-text"><span>Привод</span> {{ car.gear }}</p>
+                </div>
+
+                <div class="car-item-point">
+                  <img src="img/piston.png" alt="Engine" />
+                  <p class="point-text"><span>Двигатель</span> 5.2 л.с.</p>
+                </div>
+
+                <div class="car-item-point">
+                  <img src="assets/img/icons/belt.svg" alt="Belt" />
+                  <p class="point-text">
+                    <span>Количество</span> {{ car.places }} мест
+                  </p>
+                </div>
+
+                <div class="car-item-point">
+                  <img src="img/year.png" alt="year" />
+                  <p class="point-text"><span>Год випуска</span> 2019</p>
+                </div>
+              </div>
+
+              <div class="car-item-action">
+                <button class="car-item-btn button">Забронировать</button>
+              </div> -->
+            <!-- /.car-item-btn -->
+            <!-- </div> -->
+            <!-- /.car-item -->
+          </div>
+          <!-- /.car-items -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.car -->
+
+      <section id="price" class="price">
+        <div class="container">
+          <h2 class="sub-title">Узнать цену и забронировать</h2>
+          <!-- /.sub-title -->
+          <div class="price-text">
+            Заполните данные, и мы перезвоним вам для уточнения всех деталей
+            бронирования
+          </div>
+          <!-- /.price-text -->
+          <form action="#" class="price-form">
+            <input
+              id="name"
+              type="text"
+              class="price-input"
+              placeholder="Ваше имя"
+            />
+            <input
+              id="phone"
+              type="text"
+              class="price-input"
+              placeholder="Ваше телефон"
+            />
+            <input
+              id="car"
+              type="text"
+              class="price-input"
+              placeholder="Автомобиль, который вас интересует"
+            />
+
+            <button id="price-action" class="price-btn button" type="button">
+              Узнать цену
+            </button>
+            <!-- /.price-btn button -->
+          </form>
+          <!-- /.price-form -->
+          <img class="price-image" src="img/rolls.png" alt="Rolls" />
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.price -->
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <img src="img/logo.png" alt="logo" />
+        </div>
+        <!-- /.logo -->
+
+        <!-- Social -->
+        <div class="footer__social">
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BhcBiHBFlT5yVayJn2EHCdQ%3D%3D"
+                class="social-link"
+              >
+                <img
+                  src="img/icons/socials/linkedin.svg"
+                  alt="linkedin"
+                  class="social-logo"
+                  width="30"
+                  height="30"
+                />
+              </a>
+            </li>
+            <!-- ./linkedin -->
+
+            <li class="social-item">
+              <a
+                href="mailto:svitlychnyi1905@gmail.com"
+                target="_blank"
+                class="social-link"
+              >
+                <img
+                  src="img/icons/socials/gmail.svg"
+                  alt="gmail"
+                  class="social-logo"
+                  width="30"
+                  height="30"
+                />
+              </a>
+            </li>
+            <!-- ./gmail -->
+
+            <li class="social-item">
+              <a
+                href="https://github.com/SergSvet87"
+                target="_blank"
+                class="social-link"
+                ><img
+                  src="img/icons/socials/github.svg"
+                  alt="github"
+                  class="social-logo"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+            <!-- ./github -->
+
+            <li class="social-item">
+              <a
+                href="https://stackoverflow.com/users/20042762/serhii-svitlychnyi"
+                target="_blank"
+                class="social-link"
+                ><img
+                  src="img/icons/socials/stackoverflow.svg"
+                  alt="stackoverflow"
+                  class="social-logo"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+            <!-- ./stackoverflow -->
+
+            <li class="social-item">
+              <a
+                href="https://t.me/Serg_svet"
+                target="_blank"
+                class="social-link"
+                ><img
+                  src="img/icons/socials/telegram.svg"
+                  alt="telegram"
+                  class="social-logo"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+            <!-- ./telegram -->
+
+            <li class="social-item">
+              <a
+                href="https://www.facebook.com/s.svetlichnyy/"
+                target="_blank"
+                class="social-link"
+                ><img
+                  src="img/icons/socials/facebook.svg"
+                  alt="facebook"
+                  class="social-logo"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+            <!-- ./facebook -->
+
+            <li class="social-item">
+              <a
+                href="Skype:https://join.skype.com/invite/CBnR8fF6vKfj"
+                target="_blank"
+                class="social-link"
+                ><img
+                  src="img/icons/socials/Skype.svg"
+                  alt="Skype"
+                  class="social-logo"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+            <!-- ./skype -->
+          </ul>
+        </div>
+        <!-- ./social -->
+
+        <!-- Animation -->
+        <div class="footer__animation animation">
+          <a
+            href="https://sergsvet87.github.io/My_RESUME/"
+            class="animation__link"
+            target="_blank"
+          >
+            <svg
+              class="animation__circle"
+              width="100"
+              height="100"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 54 54"
+              style="enable-background: new 0 0 54 54"
+              xml:space="preserve"
+              fill="#d7d7d7"
+            >
+              <g>
+                <path
+                  id="circleShape"
+                  class="circle__shape"
+                  d="M27,0C12.112,0,0,12.112,0,27s12.112,27,27,27s27-12.112,27-27S41.888,0,27,0z M27,52C13.215,52,2,40.785,2,27
+                  S13.215,2,27,2s25,11.215,25,25S40.785,52,27,52z"
+                  fill="none"
+                />
+                <!---->
+                <path
+                  class="animation__arrow"
+                  transform="scale(0.6)"
+                  d="M32.413,14.293c-0.391-0.391-1.023-0.391-1.414,0L19.501,25.791c-0.667,0.667-0.667,1.751,0,2.418l11.498,11.498
+                  C31.194,39.902,31.45,40,31.706,40s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414L21.12,27l11.293-11.293
+                  C32.804,15.316,32.804,14.684,32.413,14.293z"
+                  fill="#fff"
+                />
+              </g>
+              <text class="animation__text">
+                <textPath href="#circleShape">Сергій Світличний</textPath>
+              </text>
+            </svg>
+          </a>
+        </div>
+        <!-- /.footer__animation -->
+
+        <div class="footer__copyright">
+          &copy; Copyright
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved | This template is made with
+          <i class="material-icons">favorite</i> in
+          <address class="footer__address">
+            <a
+              href="https://sergsvet87.github.io/My_Portfolio/"
+              target="_blank"
+            >
+              Ukraine, Kharkiv</a
+            >
+          </address>
+        </div>
+        <!-- ./footer-text -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/paralax.min.js"></script>
+    <script src="scripts/reservation.js"></script>
+  </body>
+</html>
